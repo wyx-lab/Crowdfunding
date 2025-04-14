@@ -1,7 +1,7 @@
 <!-- src/views/LoginPage.vue -->
 <template>
   <div>
-    <h2>请选择一个账户</h2>
+    <h2>请选择一个账户登录</h2>
     <select v-model="selectedAccount">
       <option disabled value="">请选择账户</option>
       <option v-for="acc in accounts" :key="acc" :value="acc">{{ acc }}</option>

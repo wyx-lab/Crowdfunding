@@ -62,7 +62,8 @@ module.exports = {
     development: {
       host: "127.0.0.1",     // 本地地址
       port: 7545,            // Ganache默认端口（或你启动时设置的端口）
-      network_id: "*"       // 匹配任何network id
+      network_id: "*" ,      // 匹配任何network id
+      gas:10000000000
     },
 
 
@@ -72,7 +73,7 @@ module.exports = {
           `https://ropsten.infura.io/v3/${process.env.INFURA_API_KEY}` // Infura节点
       ),
       network_id: 3,
-      gas: 5500000,
+      gas: 100000000,
       confirmations: 2,
       timeoutBlocks: 200,
       skipDryRun: true
@@ -125,7 +126,7 @@ module.exports = {
   // Configure your compilers
   compilers: {
     solc: {
-      version: "0.7.0",      // Fetch exact version from solc-bin (default: truffle's version)
+      version: "0.8.0",      // Fetch exact version from solc-bin (default: truffle's version)
       // settings: {
       //   optimizer: { enabled: true, runs: 200 } ,
       //   evmVersion: "LONDON"
